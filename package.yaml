@@ -48,3 +48,12 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - hichihikers-haskell
+  hichihikers-haskell-unit-test:
+    main:                Spec.hs
+    source-dirs:         test/unit
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hichihikers-haskell

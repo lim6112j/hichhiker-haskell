@@ -66,3 +66,18 @@ test-suite hichihikers-haskell-test
     , hichihikers-haskell
     , parsec >=3.1.11 && <4
   default-language: Haskell2010
+
+test-suite hichihikers-haskell-unit-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hichihikers_haskell
+  hs-source-dirs:
+      test/unit
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck >=2.14.2
+    , base >=4.7 && <5
+    , hichihikers-haskell
+    , parsec >=3.1.11 && <4
+  default-language: Haskell2010

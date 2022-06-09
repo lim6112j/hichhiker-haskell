@@ -17,4 +17,6 @@ prop_greedy_pack_is_fixpoint ds =
    in pack_size pack == pack_size (greedy_pack (dirs pack))
 
 main :: IO ()
-main = quickCheck prop_greedy_pack_is_fixpoint
+main = do
+  putStrLn "Lib2 test started -----"
+  quickCheck prop_greedy_pack_is_fixpoint
