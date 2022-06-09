@@ -1,10 +1,4 @@
-module Lib2
-  ( someFunc,
-    Dir,
-    maybe_add_dir,
-    DirPack,
-  )
-where
+module Lib2 where
 
 import Control.Monad (liftM2, replicateM)
 import Data.List (sortBy)
