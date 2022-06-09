@@ -2,11 +2,24 @@ module Lib2 where
 
 import Control.Monad (liftM2, replicateM)
 import Data.List (sortBy)
-import Test.QuickCheck
 import Text.ParserCombinators.Parsec
+  ( Parser,
+    anyChar,
+    digit,
+    eof,
+    many,
+    many1,
+    manyTill,
+    newline,
+    parse,
+    spaces,
+  )
 
 -- data Dir = Dir Int String deriving (Show)
 data Dir = Dir {dir_size :: Int, dir_name :: String} deriving (Show)
+
+instance Eq Dir where
+  (==) a b = (dir_size a == dir_size b) && (dir_name a == dir_name b)
 
 data DirPack = DirPack {pack_size :: Int, dirs :: [Dir]} deriving (Show)
 
